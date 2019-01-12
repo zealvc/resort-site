@@ -72,7 +72,7 @@
           <v-list-tile-action>
             <v-icon light>compare_arrows</v-icon>
           </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
+          <v-list-tile-title>{{ $t('message.hello') }}</v-list-tile-title>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>

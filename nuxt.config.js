@@ -1,3 +1,5 @@
+const { I18N } = require('./config')
+
 const pkg = require('./package')
 
 module.exports = {
@@ -43,7 +45,8 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['nuxt-i18n', I18N]
   ],
   /*
   ** Axios module configuration
