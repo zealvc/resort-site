@@ -1,92 +1,64 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      :clipped="clipped"
-      :mini-variant="miniVariant"
-      v-model="drawer"
-      app
-      fixed
-    >
-      <v-list>
-        <v-list-tile
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          exact
-          router
-        >
-          <v-list-tile-action>
-            <v-icon v-html="item.icon"/>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"/>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
+  <v-app>
     <v-toolbar
-      :clipped-left="clipped"
+      :clipped-left="$vuetify.breakpoint.lgAndUp"
+      height="60px"
+      flat
+      color="white"
       app
       fixed
     >
-      <v-toolbar-side-icon @click="drawer = !drawer"/>
       <v-btn
         icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"/>
+        large>
+        <v-avatar
+          size="40px"
+          tile>
+          <img
+            src="/vkirirom_logo.svg"
+            alt="">
+        </v-avatar>
       </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>remove</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title"/>
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>menu</v-icon>
-      </v-btn>
+      <v-spacer/>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <toolbar-item-button>
+          Help
+        </toolbar-item-button>
+        <toolbar-item-button>
+          Sign Up
+        </toolbar-item-button>
+        <toolbar-item-button>
+          Log In
+        </toolbar-item-button>
+      </v-toolbar-items>
     </v-toolbar>
     <v-content>
       <v-container>
         <nuxt/>
       </v-container>
     </v-content>
-    <v-navigation-drawer
-      :right="right"
-      v-model="rightDrawer"
-      fixed
-      temporary
-    >
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>{{ $t('message.hello') }}</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer
-      :fixed="fixed"
+      height="auto"
       app
     >
-      <span>&copy; 2017</span>
+      <v-avatar
+        size="42px"
+        tile
+      >
+        <img
+          src="/vkirirom_logo.svg"
+          alt="">
+      </v-avatar>
+      <span>&copy; vKirirom Pine Resort, co.Ltd</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+import ToolbarItemButton from '../components/ToolbarItemButton'
+
 export default {
+  components: { ToolbarItemButton },
   data() {
     return {
       clipped: false,
