@@ -1,42 +1,47 @@
 <template>
   <v-app>
-    <v-toolbar
-      :clipped-left="$vuetify.breakpoint.lgAndUp"
-      height="60px"
-      flat
-      color="white"
-      app
-      fixed
+    <v-parallax
+      height="100%"
+      src="https://www.ahstatic.com/photos/b2r4_sl_05_p_2048x1536.jpg"
     >
-      <v-btn
-        icon
-        large>
-        <v-avatar
-          size="40px"
-          tile>
-          <img
-            src="/vkirirom_logo.svg"
-            alt="">
-        </v-avatar>
-      </v-btn>
-      <v-spacer/>
-      <v-toolbar-items class="hidden-sm-and-down">
-        <toolbar-item-button>
-          Help
-        </toolbar-item-button>
-        <toolbar-item-button>
-          Sign Up
-        </toolbar-item-button>
-        <toolbar-item-button>
-          Log In
-        </toolbar-item-button>
-      </v-toolbar-items>
-    </v-toolbar>
-    <v-content>
-      <v-container>
-        <nuxt/>
-      </v-container>
-    </v-content>
+      <v-toolbar
+        :clipped-left="$vuetify.breakpoint.lgAndUp"
+        height="60px"
+        flat
+        color="white"
+        app
+        fixed
+      >
+        <v-btn
+          icon
+          large>
+          <v-avatar
+            size="40px"
+            tile>
+            <img
+              src="/vkirirom_logo.svg"
+              alt="">
+          </v-avatar>
+        </v-btn>
+        <v-spacer/>
+        <v-toolbar-items class="hidden-sm-and-down">
+          <toolbar-item-button>
+            Help
+          </toolbar-item-button>
+          <toolbar-item-button>
+            Sign Up
+          </toolbar-item-button>
+          <toolbar-item-button>
+            Log In
+          </toolbar-item-button>
+        </v-toolbar-items>
+      </v-toolbar>
+      <v-content>
+        <v-container>
+          <nuxt/>
+        </v-container>
+      </v-content>
+    </v-parallax>
     <v-footer
       height="auto"
       app
