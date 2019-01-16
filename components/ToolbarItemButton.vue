@@ -1,7 +1,7 @@
 <template>
   <v-btn 
     flat 
-    class="text-capitalize">
+    class="title text-capitalize white--text">
     <slot/>
   </v-btn>
 </template>
