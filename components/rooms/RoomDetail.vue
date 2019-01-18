@@ -1,23 +1,15 @@
 <template>
   <div>
     Room Details
-    <v-layout pb-1>
+    <div class="pb-5">
       <h1>
         <span class="title">
           'Silo Studio' Cottage
         </span>
       </h1>
-    </v-layout>
+    </div>
     <div class="">
-      <div>
-        <v-icon>group</v-icon> 2 guests
-        <v-icon>meeting_room</v-icon> 1 bedroom
-        <v-icon>meeting_room</v-icon> 1 bed
-        <v-icon>meeting_room</v-icon> 1 bath
-      </div>
-      <v-card flat>
-        <v-card-text>Metheany</v-card-text>
-      </v-card>
+      <RoomAvailability/>
       <div>
         <p>
           <span class="subheading">
@@ -26,11 +18,16 @@
         </p>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
+import RoomAvailability from '~/components/rooms/details/RoomAvailability'
+export default {
+  components: {
+    RoomAvailability
+  }
+}
 </script>
 
 <style>

@@ -30,6 +30,7 @@
       <v-card-title>
         <div>
           <span>Date</span>
+          <DateCheckinCheckout/>
         </div>
       </v-card-title>
       <v-card-actions class="justify-center">
@@ -43,7 +44,9 @@
 </template>
 
 <script>
+import DateCheckinCheckout from '~/components/date/DateCheckinCheckout'
 export default {
+  components: { DateCheckinCheckout },
   data: () => ({
     price: 195,
     reviews: 413,

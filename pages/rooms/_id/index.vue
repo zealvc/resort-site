@@ -5,18 +5,21 @@
     <v-container pa-3>
       <v-layout
         row
-        wrap
-        style="padding-left: 24px; padding-right: 24px">
+        wrap>
         <v-flex
-          xs8>
-          <v-content
-            color="green darken-1">
+          pa-2
+          md8
+          sm12
+          xs12>
+          <v-content>
             <RoomDetail/>
           </v-content>
         </v-flex>
         <v-flex
           pa-2
-          xs4>
+          md4
+          sm12
+          xs12>
           <BookWindow/>
         </v-flex>
       </v-layout>

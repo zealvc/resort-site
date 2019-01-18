@@ -21,6 +21,10 @@ module.exports = {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css'
       }
     ]
   },
@@ -38,7 +42,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['@/plugins/vuetify'],
+  plugins: ['@/plugins/vuetify', '@/plugins/airbnb-datepicker'],
 
   /*
   ** Nuxt.js modules
@@ -48,6 +52,7 @@ module.exports = {
     '@nuxtjs/axios',
     ['nuxt-i18n', I18N]
   ],
+
   /*
   ** Axios module configuration
   */
