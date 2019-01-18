@@ -46,6 +46,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
+    ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 60 }],
     ['nuxt-i18n', I18N]
   ],
   /*
