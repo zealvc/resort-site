@@ -166,8 +166,8 @@
               <v-btn
                 depressed
                 large
-                class="white--text text-capitalize"
-                color="#7085F6"
+                class="white--text text-capitalize font-weight-bold"
+                color="#006A70"
               >
                 Search
               </v-btn>
