@@ -1,6 +1,10 @@
 module.exports = {
   message: {
-    hello: 'hello world'
+    hello: 'hello world',
+    sign_up: 'Sign Up',
+    sign_in: 'Log In',
+    about: 'About',
+    app_logo_alt: 'vKirirom App Logo'
   },
   booking_card: {
     title: 'Book accommodations and activities.',
