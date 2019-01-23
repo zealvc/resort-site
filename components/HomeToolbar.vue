@@ -1,7 +1,7 @@
 <template>
   <v-toolbar
     :clipped-left="$vuetify.breakpoint.lgAndUp"
-    height="60px"
+    height="80px"
     flat
     color="transparent"
     absolute
