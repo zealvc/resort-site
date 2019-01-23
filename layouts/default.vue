@@ -1,30 +1,26 @@
 <template>
   <v-app>
-    <v-content>
+    <app-navigation/>
+    <v-content transition="slide-x-transition">
       <nuxt/>
     </v-content>
+    <app-footer/>
   </v-app>
 </template>
 
 <script>
 import ToolbarItemButton from '../components/ToolbarItemButton'
+import AppNavigation from '../components/AppNavigation'
+import AppFooter from '../components/AppFooter'
 
 export default {
-  components: { ToolbarItemButton },
+  components: { AppFooter, AppNavigation, ToolbarItemButton },
   data() {
     return {
-      clipped: false,
-      drawer: true,
-      fixed: false,
-      items: [
-        { icon: 'apps', title: 'Welcome', to: '/' },
-        { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
       title: 'Vuetify.js'
     }
   }
 }
 </script>
+<style scoped>
+</style>

@@ -1,7 +1,7 @@
 <template>
   <v-btn 
     flat 
-    class="title text-capitalize white--text">
+    class="toolbar-item-text text-capitalize white--text">
     <slot/>
   </v-btn>
 </template>
@@ -13,4 +13,9 @@ export default {
 </script>
 
 <style scoped>
+.toolbar-item-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e7f2ed;
+}
 </style>
