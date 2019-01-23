@@ -42,7 +42,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['@/plugins/vuetify'],
+  plugins: ['@/plugins/vuetify', { src: '~plugins/slick', ssr: false }],
 
   /*
   ** Nuxt.js modules
@@ -77,7 +77,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: ['vue-slick']
   },
   server: {
     port: 3000,
