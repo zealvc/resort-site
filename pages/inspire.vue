@@ -1,18 +1,17 @@
 <template>
-  <v-layout>
-    <v-flex text-xs-center>
-      <img
-        alt="Vuetify.js"
-        class="mb-5"
-        src="/v.png">
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
-    </v-flex>
+  <v-layout class="ma-5">
+    <card-item-with-price
+      type="Private Room"
+      title="Khmer Cottage"
+      price="$9"
+      img-src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+      go-to-link="/inspire"
+    />
   </v-layout>
 </template>
+<script>
+import CardItemWithPrice from '../components/CardItemWithPrice'
+export default {
+  components: { CardItemWithPrice }
+}
+</script>
