@@ -19,7 +19,7 @@
 <script>
 import Accommodation from './Cards/Accommodation'
 import FindCards from './Cards/FindCards'
-import TopRated from './Cards/TopRated'
+import TopRated from './TopRated'
 import Restaurant from './Cards/Restaurant'
 import SoloActivities from './Cards/SoloActivities'
 import TeamActivities from './Cards/TeamActivities'
