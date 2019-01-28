@@ -100,6 +100,7 @@ export default {
         per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Khmer Cottage',
         image:
           'https://www.vkirirom.com/images/detailsimage/khmercottage/khmercottage1.JPG',
@@ -108,6 +109,7 @@ export default {
         per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Auto Camping',
         image:
           'https://www.vkirirom.com/images/detailsimage/camping/camping4.JPG',
@@ -116,6 +118,7 @@ export default {
         per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Pipe Room',
         image:
           'https://www.vkirirom.com/images/detailsimage/piperoom/piperoom5.JPG',
@@ -124,6 +127,7 @@ export default {
         per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Khmer Cottage',
         image:
           'https://www.vkirirom.com/images/detailsimage/khmercottage/khmercottage1.JPG',
@@ -132,6 +136,7 @@ export default {
         per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Auto Camping',
         image:
           'https://www.vkirirom.com/images/detailsimage/camping/camping4.JPG',
@@ -140,6 +145,7 @@ export default {
         per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Pipe Room',
         image:
           'https://www.vkirirom.com/images/detailsimage/piperoom/piperoom5.JPG',
@@ -157,6 +163,7 @@ export default {
         per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Khmer Cottage',
         image:
           'https://www.vkirirom.com/images/detailsimage/khmercottage/khmercottage1.JPG',
@@ -165,6 +172,7 @@ export default {
         per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Auto Camping',
         image:
           'https://www.vkirirom.com/images/detailsimage/camping/camping4.JPG',
@@ -173,6 +181,7 @@ export default {
         per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Pipe Room',
         image:
           'https://www.vkirirom.com/images/detailsimage/piperoom/piperoom5.JPG',

@@ -16,7 +16,7 @@
         <v-flex xs8>
           <v-card-title primary-title>
             <div class="blue-grey--text text--darken-3">
-              <h3 class="font-weight-bold">{{ category }}</h3>
+              <div class="subheading font-weight-bold text-capitalize">{{ category }}</div>
             </div>
           </v-card-title>
         </v-flex>
