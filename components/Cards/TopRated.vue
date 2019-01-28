@@ -46,7 +46,7 @@
 export default {
   data: () => ({
     slickOptions: {
-      dots: true,
+      dots: false,
       infinite: false,
       slidesToShow: 6,
       variableWidth: true,
@@ -68,75 +68,105 @@ export default {
         }
       ]
     },
-    cards: [
+    posts: [
       {
-        title: 'Accommodation',
-        name: 'bungalow',
-        src:
+        category: 'Accommodation',
+        title: 'Luxury Tent',
+        image:
           'https://www.vkirirom.com/images/detailsimage/bungalow/bungalow2.jpg',
-        price: '80$ per night',
-        href: '#'
+        price: '80',
+        href: '#',
+        per: 'night'
       },
       {
-        title: 'Restaurant',
-        name: 'Food Name',
-        src:
-          'https://www.healthline.com/hlcmsresource/images/News/food-fads/070615_restaurants_THUMB_LARGE.jpg',
-        price: '10$',
-        href: '#'
+        title: 'Khmer Cottage',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/khmercottage/khmercottage1.JPG',
+        price: 50,
+        href: '#',
+        per: 'night'
       },
       {
-        title: 'Activities',
-        name: 'Bubble Soccer',
-        src: 'https://www.vkirirom.com/images/Activity/BubbleSoccer.jpg',
-        price: '20$',
-        href: '#'
+        title: 'Auto Camping',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/camping/camping4.JPG',
+        price: 30,
+        href: '#',
+        per: 'night'
       },
       {
-        title: 'Accommodation',
-        name: 'bungalow',
-        src:
+        title: 'Pipe Room',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/piperoom/piperoom5.JPG',
+        price: 30,
+        href: '#',
+        per: 'night'
+      },
+      {
+        category: 'Accomodation',
+        title: 'Luxury Tent',
+        image:
           'https://www.vkirirom.com/images/detailsimage/bungalow/bungalow2.jpg',
-        price: '80$ per night',
-        href: '#'
+        price: '80',
+        href: '#',
+        per: 'night'
       },
       {
-        title: 'Restaurant',
-        name: 'Food Name',
-        src:
-          'https://www.healthline.com/hlcmsresource/images/News/food-fads/070615_restaurants_THUMB_LARGE.jpg',
-        price: '10$',
-        href: '#'
+        title: 'Khmer Cottage',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/khmercottage/khmercottage1.JPG',
+        price: 50,
+        href: '#',
+        per: 'night'
       },
       {
-        title: 'Activities',
-        name: 'Bubble Soccer',
-        src: 'https://www.vkirirom.com/images/Activity/BubbleSoccer.jpg',
-        price: '20$',
-        href: '#'
+        title: 'Auto Camping',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/camping/camping4.JPG',
+        price: 30,
+        href: '#',
+        per: 'night'
       },
       {
-        title: 'Accommodation',
-        name: 'bungalow',
-        src:
+        title: 'Pipe Room',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/piperoom/piperoom5.JPG',
+        price: 30,
+        href: '#',
+        per: 'night'
+      },
+      {
+        category: 'Accomodation',
+        title: 'Luxury Tent',
+        image:
           'https://www.vkirirom.com/images/detailsimage/bungalow/bungalow2.jpg',
-        price: '80$ per night',
-        href: '#'
+        price: '80',
+        href: '#',
+        per: 'night'
       },
       {
-        title: 'Restaurant',
-        name: 'Food Name',
-        src:
-          'https://www.healthline.com/hlcmsresource/images/News/food-fads/070615_restaurants_THUMB_LARGE.jpg',
-        price: '10$',
-        href: '#'
+        title: 'Khmer Cottage',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/khmercottage/khmercottage1.JPG',
+        price: 50,
+        href: '#',
+        per: 'night'
       },
       {
-        title: 'Activities',
-        name: 'Bubble Soccer',
-        src: 'https://www.vkirirom.com/images/Activity/BubbleSoccer.jpg',
-        price: '20$',
-        href: '#'
+        title: 'Auto Camping',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/camping/camping4.JPG',
+        price: 30,
+        href: '#',
+        per: 'night'
+      },
+      {
+        title: 'Pipe Room',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/piperoom/piperoom5.JPG',
+        price: 30,
+        href: '#',
+        per: 'night'
       }
     ]
   })
