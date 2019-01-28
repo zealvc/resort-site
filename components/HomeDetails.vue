@@ -4,7 +4,7 @@
   >
     <v-container
       class="blue-grey--text text--darken-3">
-      <find-cards/>
+      <help-find/>
       <top-rated/>
       <accommodation/>
       <restaurant/>
@@ -18,20 +18,20 @@
 
 <script>
 import Accommodation from './Cards/Accommodation'
-import FindCards from './Cards/FindCards'
 import TopRated from './TopRated'
 import Restaurant from './Cards/Restaurant'
 import SoloActivities from './Cards/SoloActivities'
 import TeamActivities from './Cards/TeamActivities'
 import RentalTransportation from './Cards/RentalTransportation'
 import RentalBuilding from './Cards/RentalBuilding'
+import HelpFind from './HelpFind'
 export default {
   name: 'HomeDetails',
   components: {
+    HelpFind,
     TeamActivities,
     SoloActivities,
     TopRated,
-    FindCards,
     Accommodation,
     Restaurant,
     RentalTransportation,
