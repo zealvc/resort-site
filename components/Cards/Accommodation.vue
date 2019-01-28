@@ -1,80 +1,173 @@
 <template>
   <div>
-    <div>
-      <h2>Introducing of Accommodation</h2>
-    </div>
+    <div class="headline font-weight-bold">Introducing of Accommodation</div>
     <slick
       ref="slick"
       :options="slickOptions">
-      <div
-        v-for="card in cards"
-        :key="card.id">
-        <v-card
-          :href="card.href"
-          flat
-          class="ma-0 rounded-card grey--text text--darken-3"
-          style="background-color: transparent"
-          min-width="267px">
-          <v-layout column>
-            <v-flex xs4>
-              <v-img
-                :src="card.src"
-                class="rounded-card"
-                height="150px"/>
-            </v-flex>
-            <v-flex xs8>
-              <v-card-title class="px-0 py-2">
-                <div class="blue-grey--text text--darken-3">
-                  <h1 class="body-2 font-weight-thin text-capitalize">Accommodation</h1>
-                  <h1 class="title font-weight-bold text-capitalize">{{ card.title }}</h1>
-                  <h1 class="subheading font-weight-thin text-lowercase">{{ card.price }}$ per night</h1>
-                </div>
-              </v-card-title>
-            </v-flex>
-          </v-layout>
-        </v-card>
-      </div>
+      <intro-card
+        v-for="(post, index) in posts"
+        v-if="index < 4"
+        :key="post.id"
+        :category="post.category"
+        :title="post.title"
+        :price="post.price"
+        :per="'per ' + post.per"
+        :image="post.image"/>
     </slick>
   </div>
 </template>
 
 <script>
+import IntroCard from './IntroCard'
+import IntroSlick from '../Slots/introSlick'
 export default {
+  components: { IntroSlick, IntroCard },
   data: () => ({
     slickOptions: {
       dots: false,
       infinite: false,
       slidesToShow: 4,
-      variableWidth: true
+      variableWidth: true,
+
+      responsive: [
+        {
+          breakpoint: 1224,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 320,
+          settings: {
+            arrows: false,
+            slidesToShow: 1
+          }
+        }
+      ]
     },
-    cards: [
+    posts: [
       {
+        category: 'Accommodation',
         title: 'Luxury Tent',
-        src:
+        image:
           'https://www.vkirirom.com/images/detailsimage/bungalow/bungalow2.jpg',
         price: '80',
-        href: '#'
+        href: '#',
+        per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Khmer Cottage',
-        src:
+        image:
           'https://www.vkirirom.com/images/detailsimage/khmercottage/khmercottage1.JPG',
         price: '50',
-        href: '#'
+        href: '#',
+        per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Auto Camping',
-        src:
+        image:
           'https://www.vkirirom.com/images/detailsimage/camping/camping4.JPG',
         price: '30',
-        href: '#'
+        href: '#',
+        per: 'night'
       },
       {
+        category: 'Accommodation',
         title: 'Pipe Room',
-        src:
+        image:
           'https://www.vkirirom.com/images/detailsimage/piperoom/piperoom5.JPG',
         price: '30',
-        href: '#'
+        href: '#',
+        per: 'night'
+      },
+      {
+        category: 'Accommodation',
+        title: 'Khmer Cottage',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/khmercottage/khmercottage1.JPG',
+        price: '50',
+        href: '#',
+        per: 'night'
+      },
+      {
+        category: 'Accommodation',
+        title: 'Auto Camping',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/camping/camping4.JPG',
+        price: '30',
+        href: '#',
+        per: 'night'
+      },
+      {
+        category: 'Accommodation',
+        title: 'Pipe Room',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/piperoom/piperoom5.JPG',
+        price: '30',
+        href: '#',
+        per: 'night'
+      },
+      {
+        category: 'Accommodation',
+        title: 'Luxury Tent',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/bungalow/bungalow2.jpg',
+        price: '80',
+        href: '#',
+        per: 'night'
+      },
+      {
+        category: 'Accommodation',
+        title: 'Khmer Cottage',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/khmercottage/khmercottage1.JPG',
+        price: '50',
+        href: '#',
+        per: 'night'
+      },
+      {
+        category: 'Accommodation',
+        title: 'Auto Camping',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/camping/camping4.JPG',
+        price: '30',
+        href: '#',
+        per: 'night'
+      },
+      {
+        category: 'Accommodation',
+        title: 'Pipe Room',
+        image:
+          'https://www.vkirirom.com/images/detailsimage/piperoom/piperoom5.JPG',
+        price: '30',
+        href: '#',
+        per: 'night'
       }
     ]
   })
@@ -82,8 +175,4 @@ export default {
 </script>
 
 <style scoped>
-.rounded-card {
-  border-radius: 3px;
-  overflow: hidden;
-}
 </style>
