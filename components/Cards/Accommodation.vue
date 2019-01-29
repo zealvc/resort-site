@@ -12,16 +12,16 @@
         :title="post.title"
         :price="post.price"
         :per="'per ' + post.per"
-        :image="post.image"/>
+        :image="post.image"
+        :href="href"/>
     </slick>
   </div>
 </template>
 
 <script>
 import IntroCard from './IntroCard'
-import IntroSlick from '../Slots/introSlick'
 export default {
-  components: { IntroSlick, IntroCard },
+  components: { IntroCard },
   data: () => ({
     slickOptions: {
       dots: false,
