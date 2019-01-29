@@ -71,7 +71,7 @@ export default {
     posts: [
       {
         category: 'Restaurant',
-        title: 'Luxury Tent',
+        title: 'Name of Food',
         image:
           'https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2018/06/chicken-wings-main.jpg',
         price: '20',
@@ -79,7 +79,7 @@ export default {
       },
       {
         category: 'Restaurant',
-        title: 'Khmer Cottage',
+        title: 'Name of Food',
         image:
           'http://pandagarden.ca/wp-content/uploads/2017/11/chicken-Chow-Mein_1430566912_1644579089.jpg',
         price: '10',
@@ -87,7 +87,7 @@ export default {
       },
       {
         category: 'Restaurant',
-        title: 'Auto Camping',
+        title: 'Name of Food',
         image:
           'https://img.huffingtonpost.com/asset/5b9e98b83c00004c000a9c7c.jpeg?ops=scalefit_720_noupscale',
         price: '15',
@@ -95,7 +95,7 @@ export default {
       },
       {
         category: 'Restaurant',
-        title: 'Pipe Room',
+        title: 'Name of Food',
         image:
           'https://www.worldofbuzz.com/wp-content/uploads/2018/02/pork-belly-featured-image.jpg',
         price: '10',
