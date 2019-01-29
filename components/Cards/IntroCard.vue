@@ -7,13 +7,13 @@
       style="background-color: transparent"
       min-width="267px">
       <v-layout column>
-        <v-flex xs4>
+        <v-flex xs8>
           <v-img
             :src="image"
             class="rounded-card"
-            height="150px"/>
+            aspect-ratio="1.7"/>
         </v-flex>
-        <v-flex xs8>
+        <v-flex xs4>
           <v-card-title class="px-0 py-2">
             <div class="blue-grey--text text--darken-3">
               <div class="body-2 font-weight-thin text- capitalize">{{ category }}</div>
