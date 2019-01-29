@@ -8,9 +8,7 @@
       <top-rated/>
       <accommodation/>
       <restaurant/>
-      <solo-activities/>
-      <team-activities/>
-      <rental-transportation/>
+      <activities/>
       <rental-building/>
     </v-container>
   </v-container>
@@ -20,21 +18,17 @@
 import Accommodation from './Cards/Accommodation'
 import TopRated from './TopRated'
 import Restaurant from './Cards/Restaurant'
-import SoloActivities from './Cards/SoloActivities'
-import TeamActivities from './Cards/TeamActivities'
-import RentalTransportation from './Cards/RentalTransportation'
+import Activities from './Cards/Activities'
 import RentalBuilding from './Cards/RentalBuilding'
 import HelpFind from './HelpFind'
 export default {
   name: 'HomeDetails',
   components: {
     HelpFind,
-    TeamActivities,
-    SoloActivities,
+    Activities,
     TopRated,
     Accommodation,
     Restaurant,
-    RentalTransportation,
     RentalBuilding
   }
 }
