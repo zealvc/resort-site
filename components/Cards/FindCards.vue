@@ -6,7 +6,7 @@
       flat
       class="card ma-0 rounded-card">
       <v-layout
-        :class="{'column': $vuetify.breakpoint.xsOnly}">
+        :class="{'column': $vuetify.breakpoint.xsOnly, 'row': $vuetify.breakpoint.mdAndUp}">
         <v-flex xs4>
           <v-card-media
             :src="image"
