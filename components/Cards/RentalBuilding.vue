@@ -1,45 +1,24 @@
 <template>
   <div>
-    <div>
-      <h2>Rental Building</h2>
-    </div>
+    <div class="headline font-weight-bold">Rental Building</div>
     <slick
       ref="slick"
       :options="slickOptions">
-      <div
-        v-for="card in cards"
-        :key="card.id">
-        <v-card
-          :href="card.href"
-          flat
-          class="ma-0 rounded-card grey--text text--darken-3"
-          style="background-color: transparent"
-          min-width="267px">
-          <v-layout column>
-            <v-flex xs4>
-              <v-img
-                :src="card.src"
-                class="rounded-card"
-                height="150px"/>
-            </v-flex>
-            <v-flex xs8>
-              <v-card-title class="px-0 py-2">
-                <div class="blue-grey--text text--darken-3">
-                  <h1 class="body-2 font-weight-thin text-capitalize">Accommodation</h1>
-                  <h1 class="title font-weight-bold text-capitalize">{{ card.title }}</h1>
-                  <h1 class="subheading font-weight-thin text-lowercase">{{ card.price }}$ per night</h1>
-                </div>
-              </v-card-title>
-            </v-flex>
-          </v-layout>
-        </v-card>
-      </div>
+      <rental-card
+        v-for="(post, index) in posts"
+        v-if="index < 3"
+        :key="post.id"
+        :title="post.title"
+        :info="post.info"
+        :image="post.image"/>
     </slick>
   </div>
 </template>
 
 <script>
+import RentalCard from './RentalCard'
 export default {
+  components: { RentalCard },
   data: () => ({
     slickOptions: {
       dots: false,
@@ -49,53 +28,62 @@ export default {
 
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1224,
           settings: {
-            slidesToShow: 4
+            slidesToShow: 3
           }
         },
         {
-          breakpoint: 940,
+          breakpoint: 1024,
           settings: {
-            slidesToShow: 4
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
           }
         },
         {
           breakpoint: 480,
           settings: {
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 320,
+          settings: {
             arrows: false,
-            slidesToShow: 4
+            slidesToShow: 1
           }
         }
       ]
     },
-    cards: [
+    posts: [
       {
-        title: 'Luxury Tent',
-        src:
-          'https://www.vkirirom.com/images/detailsimage/bungalow/bungalow2.jpg',
-        price: '80',
+        title: 'Crazy Hill',
+        image: 'https://i.ytimg.com/vi/KAljw5t8JDU/maxresdefault.jpg',
+        info: 'Auto Camping + Party + Activities',
         href: '#'
       },
       {
-        title: 'Khmer Cottage',
-        src:
-          'https://www.vkirirom.com/images/detailsimage/khmercottage/khmercottage1.JPG',
-        price: '50',
+        title: 'Conference Room',
+        image:
+          'https://www.vkirirom.com/images/Services_and_Facilities/conference.jpg',
+        info: 'Meeting up to 20+ people',
         href: '#'
       },
       {
-        title: 'Auto Camping',
-        src:
-          'https://www.vkirirom.com/images/detailsimage/camping/camping4.JPG',
-        price: '30',
-        href: '#'
-      },
-      {
-        title: 'Pipe Room',
-        src:
-          'https://www.vkirirom.com/images/detailsimage/piperoom/piperoom5.JPG',
-        price: '30',
+        title: 'Borey R',
+        image: 'https://property.vkirirom.com/images/background/1.jpg',
+        info: 'Meeting up to 4 people',
         href: '#'
       }
     ]
@@ -104,8 +92,4 @@ export default {
 </script>
 
 <style scoped>
-.rounded-card {
-  border-radius: 3px;
-  overflow: hidden;
-}
 </style>

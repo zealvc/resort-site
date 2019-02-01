@@ -37,12 +37,16 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/style/app.styl'],
+  css: ['~/assets/style/app.styl', 'swiper/dist/css/swiper.css'],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['@/plugins/vuetify', { src: '~plugins/slick', ssr: false }],
+  plugins: [
+    '@/plugins/vuetify',
+    { src: '~plugins/slick', ssr: false },
+    { src: '~/plugins/swiper.js', ssr: false }
+  ],
 
   /*
   ** Nuxt.js modules

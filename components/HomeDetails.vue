@@ -4,13 +4,11 @@
   >
     <v-container
       class="blue-grey--text text--darken-3">
-      <find-cards/>
+      <help-find/>
       <top-rated/>
       <accommodation/>
       <restaurant/>
-      <solo-activities/>
-      <team-activities/>
-      <rental-transportation/>
+      <activities/>
       <rental-building/>
     </v-container>
   </v-container>
@@ -18,23 +16,19 @@
 
 <script>
 import Accommodation from './Cards/Accommodation'
-import FindCards from './Cards/FindCards'
-import TopRated from './Cards/TopRated'
+import TopRated from './TopRated'
 import Restaurant from './Cards/Restaurant'
-import SoloActivities from './Cards/SoloActivities'
-import TeamActivities from './Cards/TeamActivities'
-import RentalTransportation from './Cards/RentalTransportation'
+import Activities from './Cards/Activities'
 import RentalBuilding from './Cards/RentalBuilding'
+import HelpFind from './HelpFind'
 export default {
   name: 'HomeDetails',
   components: {
-    TeamActivities,
-    SoloActivities,
+    HelpFind,
+    Activities,
     TopRated,
-    FindCards,
     Accommodation,
     Restaurant,
-    RentalTransportation,
     RentalBuilding
   }
 }

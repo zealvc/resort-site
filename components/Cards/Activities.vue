@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="headline font-weight-bold">Introducing of Restaurant</div>
+    <div class="headline font-weight-bold">Introducing of Activities</div>
     <slick
       ref="slick"
       :options="slickOptions">
@@ -11,6 +11,7 @@
         :category="post.category"
         :title="post.title"
         :price="post.price"
+        :per="'per person'"
         :image="post.image"
         :href="href"/>
     </slick>
@@ -70,35 +71,31 @@ export default {
     },
     posts: [
       {
-        category: 'Restaurant',
-        title: 'Name of Food',
-        image:
-          'https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2018/06/chicken-wings-main.jpg',
-        price: '20',
+        category: 'Activities',
+        title: 'Bubble Soccer',
+        image: 'https://www.vkirirom.com/images/Activity/BubbleSoccer.jpg',
+        price: '80',
         href: '#'
       },
       {
-        category: 'Restaurant',
-        title: 'Name of Food',
-        image:
-          'http://pandagarden.ca/wp-content/uploads/2017/11/chicken-Chow-Mein_1430566912_1644579089.jpg',
-        price: '10',
+        category: 'Activities',
+        title: 'Mountain Bike Rental',
+        image: 'https://www.vkirirom.com/images/Activity/BikeRental.jpg',
+        price: '50',
         href: '#'
       },
       {
-        category: 'Restaurant',
-        title: 'Name of Food',
-        image:
-          'https://img.huffingtonpost.com/asset/5b9e98b83c00004c000a9c7c.jpeg?ops=scalefit_720_noupscale',
-        price: '15',
+        category: 'Activities',
+        title: 'Hit the Clay Pot',
+        image: 'https://www.vkirirom.com/images/Activity/HitClayPot.jpg',
+        price: '30',
         href: '#'
       },
       {
-        category: 'Restaurant',
-        title: 'Name of Food',
-        image:
-          'https://www.worldofbuzz.com/wp-content/uploads/2018/02/pork-belly-featured-image.jpg',
-        price: '10',
+        category: 'Activities',
+        title: 'Cycling',
+        image: 'https://www.vkirirom.com/images/Activity/Cycling.jpg',
+        price: '30',
         href: '#'
       }
     ]
