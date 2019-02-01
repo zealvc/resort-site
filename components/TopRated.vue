@@ -1,63 +1,83 @@
 <template>
   <div>
-    <div class="headline font-weight-bold">Introducing of Accommodation</div>
+    <h2 class="headline font-weight-bold">Top-rated of vKirirom Resort</h2>
     <slick
       ref="slick"
       :options="slickOptions">
-      <intro-card
-        v-for="(post, index) in posts"
-        v-if="index < 4"
-        :key="post.id"
-        :category="post.category"
-        :title="post.title"
-        :price="post.price"
-        :per="'per ' + post.per"
-        :image="post.image"
-        :href="href"/>
+      <div
+        v-for="card in cards"
+        :key="card.id">
+        <v-card
+          :href="card.href"
+          hover="true"
+          class="rounded-card"
+          min-width="171px">
+          <v-layout column>
+            <v-flex>
+              <v-img
+                :src="card.src"
+                height="240px">
+                <v-layout
+                  align-end
+                  fill-height>
+                  <v-flex>
+                    <v-card
+                      style="background-color: rgba(0,0,0,0.51);">
+                      <v-card-text class="px-2 grey--text text--lighten-3">
+                        <h1 class="body-2 font-weight-thin text-capitalize">{{ card.title }}</h1>
+                        <h1 class="title font-weight-bold text-capitalize">{{ card.name }}</h1>
+                        <h1 class="subheading font-weight-thin text-lowercase">{{ card.price }}</h1>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-img>
+            </v-flex>
+          </v-layout>
+        </v-card>
+      </div>
     </slick>
   </div>
 </template>
 
 <script>
-import IntroCard from './IntroCard'
 export default {
-  components: { IntroCard },
   data: () => ({
     slickOptions: {
       dots: false,
       infinite: false,
-      slidesToShow: 4,
+      slidesToShow: 6,
       variableWidth: true,
 
       responsive: [
         {
           breakpoint: 1224,
           settings: {
-            slidesToShow: 3
+            slidesToShow: 4
           }
         },
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3
+            slidesToShow: 4
           }
         },
         {
           breakpoint: 960,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 4
           }
         },
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 1
+            slidesToShow: 2
           }
         },
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 1
+            slidesToShow: 2
           }
         },
         {
@@ -134,7 +154,7 @@ export default {
         per: 'night'
       },
       {
-        category: 'Accommodation',
+        category: 'Accomodation',
         title: 'Luxury Tent',
         image:
           'https://www.vkirirom.com/images/detailsimage/bungalow/bungalow2.jpg',
