@@ -5,7 +5,7 @@
       :width="cardWidth"
       flat
       class="card ma-0 rounded-card">
-      <v-layout>
+      <v-layout row>
         <v-flex xs4>
           <v-card-media
             :src="image"
