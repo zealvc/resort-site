@@ -5,8 +5,7 @@
       :width="cardWidth"
       flat
       class="card ma-0 rounded-card">
-      <v-layout
-        :class="{'column': $vuetify.breakpoint.xsOnly, 'row': $vuetify.breakpoint.mdAndUp}">
+      <v-layout>
         <v-flex xs4>
           <v-card-media
             :src="image"
@@ -45,7 +44,7 @@ export default {
     cardWidth() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return '150px'
+          return '250px'
         case 'sm':
           return '250px'
         case 'md':
