@@ -4,44 +4,23 @@
     <slick
       ref="slick"
       :options="slickOptions">
-      <div
-        v-for="card in cards"
-        :key="card.id">
-        <v-card
-          :href="card.href"
-          hover="true"
-          class="rounded-card"
-          min-width="171px">
-          <v-layout column>
-            <v-flex>
-              <v-img
-                :src="card.src"
-                height="240px">
-                <v-layout
-                  align-end
-                  fill-height>
-                  <v-flex>
-                    <v-card
-                      style="background-color: rgba(0,0,0,0.51);">
-                      <v-card-text class="px-2 grey--text text--lighten-3">
-                        <h1 class="body-2 font-weight-thin text-capitalize">{{ card.title }}</h1>
-                        <h1 class="title font-weight-bold text-capitalize">{{ card.name }}</h1>
-                        <h1 class="subheading font-weight-thin text-lowercase">{{ card.price }}</h1>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-img>
-            </v-flex>
-          </v-layout>
-        </v-card>
-      </div>
+      <top-rated-card
+        v-for="(post, i) in posts"
+        :key="i"
+        :category="post.category"
+        :title="post.title"
+        :price="post.price"
+        :per="'per person'"
+        :image="post.image"
+        :href="href"/>
     </slick>
   </div>
 </template>
 
 <script>
+import TopRatedCard from './Cards/TopRatedCard'
 export default {
+  components: { TopRatedCard },
   data: () => ({
     slickOptions: {
       dots: false,
