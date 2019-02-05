@@ -12,7 +12,7 @@
         :ripple="false"
         color="white"
         class="text--white text-capitalize no-hover border-rounded ma-0">
-        View Photos
+        {{ $t('view_photos') }}
       </v-btn>
       <v-layout
         align-center

@@ -1,4 +1,5 @@
 module.exports = {
+  view_photos: 'View Photos',
   message: {
     hello: 'hello world',
     sign_up: 'Sign Up',
