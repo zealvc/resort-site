@@ -7,8 +7,11 @@
       <help-find/>
       <top-rated/>
       <accommodation/>
+      <show-all-button/>
       <restaurant/>
+      <show-all-button/>
       <activities/>
+      <show-all-button/>
       <rental-building/>
     </v-container>
   </v-container>
@@ -21,6 +24,7 @@ import Restaurant from './Cards/Restaurant'
 import Activities from './Cards/Activities'
 import RentalBuilding from './Cards/RentalBuilding'
 import HelpFind from './HelpFind'
+import ShowAllButton from './ShowAllButton'
 export default {
   name: 'HomeDetails',
   components: {
@@ -29,7 +33,8 @@ export default {
     TopRated,
     Accommodation,
     Restaurant,
-    RentalBuilding
+    RentalBuilding,
+    ShowAllButton
   }
 }
 </script>
