@@ -9,7 +9,6 @@
       </h1>
     </div>
     <div class="">
-      <RoomAvailability/>
       <div>
         <p>
           <span class="subheading">
@@ -22,11 +21,8 @@
 </template>
 
 <script>
-import RoomAvailability from '~/components/rooms/details/RoomAvailability'
 export default {
-  components: {
-    RoomAvailability
-  }
+  components: {}
 }
 </script>
 

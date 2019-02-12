@@ -1,6 +1,10 @@
 <template>
   <div>
     <ToolBarNotSignedIn/>
+    <div class="headline">Welcome to Accommodation Page</div>
+    <v-btn
+      to="/rooms/1"
+      color="blue">Go To A Room</v-btn>
   </div>
 </template>
 
