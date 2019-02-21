@@ -82,7 +82,7 @@ module.exports = {
         })
       }
     },
-    vendor: ['vue-slick']
+    vendor: ['vue-slick', 'jwt-decode']
   },
   server: {
     port: 3000,
